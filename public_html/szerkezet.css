@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+main, header, footer, article {border:1px solid gray;
+padding:5px}
+main {
+    max-width:600px;
+}
+
+table {
+    border-collapse:collapse;
+    width:100%;
+}
+table, td, th {
+    border:1px solid gray;
+}
+th{
+    background:lightblue
+}
+table tr:nth-child(odd){
+    background:lightblue
+    
+}
+.kiemel{
+ background: greenyellow;
+ cursor:grab;
+    
+}
+

@@ -5,6 +5,7 @@ $(function () {
 
 
     $("article").on("click", "th", rendez);
+     $("#Hozzaad").click(ment);
 
     
 }
@@ -41,7 +42,7 @@ function kiemel(){
     $(this).toggleClass("kiemel");
 }
 function tablazatbaKiir() {
-    //írjuk ki a Néveket egy táblázatba 
+  
 
     $("article").empty();
     $("article").append("<table>");
@@ -50,17 +51,18 @@ function tablazatbaKiir() {
         $("article table tr").append("<th id='" + item + "'>" + item + " </th>");
 
     }
+   
     for (var i = 0; i < tomb.length; i++) {
         $("article table").append("<tr>");
         for (var item in tomb[i]) {
-//            console.log("aktuális objektum " + JSON.stringify(tomb[i]));
-//            console.log("aktuális kulcs: " + item);
-//            console.log("aktuális kulcshoz tartozó elem: " + tomb[i][item]);
+          
             $("article table tr").eq(i + 1).append("<td>" + tomb[i][item] + " </td>");
 
         }
         ;
     }
+     
+   
 
 $("article th").hover( kiemel);
 }
@@ -107,10 +109,15 @@ function rendez() {
     tablazatbaKiir();
 }
 
-
-
-
-
-
-
+function ment(){
+    var ujKutya={};
+    ujKutya.Sorszám=$("#sorsz").val();
+    ujKutya.Név=$("#nev").val();
+    
+    ujKutya.Fajta=$("#fajta").val();
+    ujKutya.Kor=$("#kor").val();
+    tomb.push(ujKutya);
+    
+    tablazatbaKiir();
+}
 

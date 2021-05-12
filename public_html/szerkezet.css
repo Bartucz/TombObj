@@ -3,19 +3,25 @@
 main, header, footer, article {border:1px solid gray;
 padding:5px}
 main {
-    max-width:600px;
+    max-width:800px;
+    display:grid;
+    margin:auto;
+    text-align: center;
 }
 
-table {
-    border-collapse:collapse;
-    width:100%;
+table{
+    width: 100%;
+    border: 1px solid gray;
+    border-collapse: collapse;
+    
 }
-table, td, th {
-    border:1px solid gray;
+td,th{
+    border: 1px solid gray;
 }
 th{
-    background:lightblue
+    background-color: lightblue;
 }
+
 table tr:nth-child(odd){
     background:lightblue
     
@@ -23,6 +29,13 @@ table tr:nth-child(odd){
 .kiemel{
  background: greenyellow;
  cursor:grab;
+    
+}
+fieldset{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
     
 }
 
